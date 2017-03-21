@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BallPP;
 
 namespace PingPong
 {
@@ -125,7 +126,7 @@ namespace PingPong
             if (colorName == null) { return; }
             System.Drawing.Point mousept = PointToClient(new Point(drgevent.X, drgevent.Y));
 
-            Ball b = new PingPong.Ball();
+            Ball b = new Ball();
             b.BackColor = Color.FromName(colorName);
             b.Location = mousept;
             b.Size = new System.Drawing.Size(20, 20);

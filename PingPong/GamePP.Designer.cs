@@ -32,21 +32,21 @@
             this.pbPlayer = new System.Windows.Forms.PictureBox();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.pScreen = new System.Windows.Forms.Panel();
+            this.ball = new BallPP.Ball();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.llblCursorX = new System.Windows.Forms.Label();
-            this.lblCursorY = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblScreenLeft = new System.Windows.Forms.Label();
+            this.lblScreenWidth = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblBallTop = new System.Windows.Forms.Label();
+            this.lblCursorY = new System.Windows.Forms.Label();
+            this.llblCursorX = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblBallLeft = new System.Windows.Forms.Label();
+            this.lblBallTop = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPlayerLeft = new System.Windows.Forms.Label();
             this.lblPlayerTop = new System.Windows.Forms.Label();
-            this.lblScreenWidth = new System.Windows.Forms.Label();
-            this.lblScreenLeft = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ball = new BallPP.Ball();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer)).BeginInit();
             this.pScreen.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,7 +61,7 @@
             this.pbPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbPlayer.Location = new System.Drawing.Point(98, 484);
             this.pbPlayer.Name = "pbPlayer";
-            this.pbPlayer.Size = new System.Drawing.Size(349, 10);
+            this.pbPlayer.Size = new System.Drawing.Size(94, 10);
             this.pbPlayer.TabIndex = 0;
             this.pbPlayer.TabStop = false;
             // 
@@ -75,6 +75,16 @@
             this.pScreen.Name = "pScreen";
             this.pScreen.Size = new System.Drawing.Size(602, 535);
             this.pScreen.TabIndex = 2;
+            // 
+            // ball
+            // 
+            this.ball.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ball.Location = new System.Drawing.Point(259, 253);
+            this.ball.Name = "ball";
+            this.ball.Size = new System.Drawing.Size(20, 20);
+            this.ball.speedLeft = 4;
+            this.ball.speedTop = 4;
+            this.ball.TabIndex = 3;
             // 
             // panel1
             // 
@@ -115,33 +125,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(290, 118);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label2
+            // label12
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Cursor";
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(3, 84);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 28);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Screen";
             // 
-            // llblCursorX
+            // lblScreenLeft
             // 
-            this.llblCursorX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblCursorX.ForeColor = System.Drawing.Color.White;
-            this.llblCursorX.Location = new System.Drawing.Point(99, 0);
-            this.llblCursorX.Name = "llblCursorX";
-            this.llblCursorX.Size = new System.Drawing.Size(90, 28);
-            this.llblCursorX.TabIndex = 1;
+            this.lblScreenLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScreenLeft.ForeColor = System.Drawing.Color.White;
+            this.lblScreenLeft.Location = new System.Drawing.Point(99, 84);
+            this.lblScreenLeft.Name = "lblScreenLeft";
+            this.lblScreenLeft.Size = new System.Drawing.Size(90, 28);
+            this.lblScreenLeft.TabIndex = 10;
             // 
-            // lblCursorY
+            // lblScreenWidth
             // 
-            this.lblCursorY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursorY.ForeColor = System.Drawing.Color.White;
-            this.lblCursorY.Location = new System.Drawing.Point(195, 0);
-            this.lblCursorY.Name = "lblCursorY";
-            this.lblCursorY.Size = new System.Drawing.Size(90, 28);
-            this.lblCursorY.TabIndex = 2;
+            this.lblScreenWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScreenWidth.ForeColor = System.Drawing.Color.White;
+            this.lblScreenWidth.Location = new System.Drawing.Point(195, 84);
+            this.lblScreenWidth.Name = "lblScreenWidth";
+            this.lblScreenWidth.Size = new System.Drawing.Size(90, 28);
+            this.lblScreenWidth.TabIndex = 9;
             // 
             // label4
             // 
@@ -153,14 +163,33 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Ball";
             // 
-            // lblBallTop
+            // lblCursorY
             // 
-            this.lblBallTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBallTop.ForeColor = System.Drawing.Color.White;
-            this.lblBallTop.Location = new System.Drawing.Point(195, 28);
-            this.lblBallTop.Name = "lblBallTop";
-            this.lblBallTop.Size = new System.Drawing.Size(90, 28);
-            this.lblBallTop.TabIndex = 4;
+            this.lblCursorY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursorY.ForeColor = System.Drawing.Color.White;
+            this.lblCursorY.Location = new System.Drawing.Point(195, 0);
+            this.lblCursorY.Name = "lblCursorY";
+            this.lblCursorY.Size = new System.Drawing.Size(90, 28);
+            this.lblCursorY.TabIndex = 2;
+            // 
+            // llblCursorX
+            // 
+            this.llblCursorX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblCursorX.ForeColor = System.Drawing.Color.White;
+            this.llblCursorX.Location = new System.Drawing.Point(99, 0);
+            this.llblCursorX.Name = "llblCursorX";
+            this.llblCursorX.Size = new System.Drawing.Size(90, 28);
+            this.llblCursorX.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Cursor";
             // 
             // lblBallLeft
             // 
@@ -170,6 +199,15 @@
             this.lblBallLeft.Name = "lblBallLeft";
             this.lblBallLeft.Size = new System.Drawing.Size(90, 28);
             this.lblBallLeft.TabIndex = 5;
+            // 
+            // lblBallTop
+            // 
+            this.lblBallTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBallTop.ForeColor = System.Drawing.Color.White;
+            this.lblBallTop.Location = new System.Drawing.Point(195, 28);
+            this.lblBallTop.Name = "lblBallTop";
+            this.lblBallTop.Size = new System.Drawing.Size(90, 28);
+            this.lblBallTop.TabIndex = 4;
             // 
             // label7
             // 
@@ -198,44 +236,6 @@
             this.lblPlayerTop.Name = "lblPlayerTop";
             this.lblPlayerTop.Size = new System.Drawing.Size(90, 28);
             this.lblPlayerTop.TabIndex = 8;
-            // 
-            // lblScreenWidth
-            // 
-            this.lblScreenWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScreenWidth.ForeColor = System.Drawing.Color.White;
-            this.lblScreenWidth.Location = new System.Drawing.Point(195, 84);
-            this.lblScreenWidth.Name = "lblScreenWidth";
-            this.lblScreenWidth.Size = new System.Drawing.Size(90, 28);
-            this.lblScreenWidth.TabIndex = 9;
-            // 
-            // lblScreenLeft
-            // 
-            this.lblScreenLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScreenLeft.ForeColor = System.Drawing.Color.White;
-            this.lblScreenLeft.Location = new System.Drawing.Point(99, 84);
-            this.lblScreenLeft.Name = "lblScreenLeft";
-            this.lblScreenLeft.Size = new System.Drawing.Size(90, 28);
-            this.lblScreenLeft.TabIndex = 10;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(3, 84);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 28);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Screen";
-            // 
-            // ball
-            // 
-            this.ball.BackColor = System.Drawing.Color.Transparent;
-            this.ball.Location = new System.Drawing.Point(259, 206);
-            this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(20, 20);
-            this.ball.speedLeft = 4;
-            this.ball.speedTop = 4;
-            this.ball.TabIndex = 3;
             // 
             // GamePP
             // 
@@ -273,6 +273,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPlayerLeft;
         private System.Windows.Forms.Label lblPlayerTop;
-        private Ball ball;
+        private BallPP.Ball ball;
     }
 }

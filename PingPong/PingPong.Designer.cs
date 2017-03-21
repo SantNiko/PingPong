@@ -36,13 +36,15 @@
             this.msLenguages = new System.Windows.Forms.ToolStripMenuItem();
             this.msLEnglish = new System.Windows.Forms.ToolStripMenuItem();
             this.msLSpanish = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pInfo = new System.Windows.Forms.Panel();
             this.ball3 = new BallPP.Ball();
             this.ball2 = new BallPP.Ball();
             this.ball1 = new BallPP.Ball();
+            this.eventLog1 = new System.Diagnostics.EventLog();
             this.gamePP1 = new PingPong.GamePP();
             this.ms.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // time
@@ -72,8 +74,9 @@
             // msMNewGame
             // 
             this.msMNewGame.Name = "msMNewGame";
-            this.msMNewGame.Size = new System.Drawing.Size(181, 26);
+            this.msMNewGame.Size = new System.Drawing.Size(157, 26);
             this.msMNewGame.Text = "New Game";
+            this.msMNewGame.Click += new System.EventHandler(this.msMNewGame_Click);
             // 
             // msLenguages
             // 
@@ -87,27 +90,27 @@
             // msLEnglish
             // 
             this.msLEnglish.Name = "msLEnglish";
-            this.msLEnglish.Size = new System.Drawing.Size(181, 26);
+            this.msLEnglish.Size = new System.Drawing.Size(135, 26);
             this.msLEnglish.Text = "English";
             this.msLEnglish.Click += new System.EventHandler(this.msLEnglish_Click_1);
             // 
             // msLSpanish
             // 
             this.msLSpanish.Name = "msLSpanish";
-            this.msLSpanish.Size = new System.Drawing.Size(181, 26);
+            this.msLSpanish.Size = new System.Drawing.Size(135, 26);
             this.msLSpanish.Text = "Spanish";
             this.msLSpanish.Click += new System.EventHandler(this.msLSpanish_Click_1);
             // 
-            // panel1
+            // pInfo
             // 
-            this.panel1.AllowDrop = true;
-            this.panel1.Controls.Add(this.ball3);
-            this.panel1.Controls.Add(this.ball2);
-            this.panel1.Controls.Add(this.ball1);
-            this.panel1.Location = new System.Drawing.Point(0, 719);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1038, 105);
-            this.panel1.TabIndex = 2;
+            this.pInfo.AllowDrop = true;
+            this.pInfo.Controls.Add(this.ball3);
+            this.pInfo.Controls.Add(this.ball2);
+            this.pInfo.Controls.Add(this.ball1);
+            this.pInfo.Location = new System.Drawing.Point(0, 719);
+            this.pInfo.Name = "pInfo";
+            this.pInfo.Size = new System.Drawing.Size(1038, 105);
+            this.pInfo.TabIndex = 2;
             // 
             // ball3
             // 
@@ -139,6 +142,10 @@
             this.ball1.speedTop = 4;
             this.ball1.TabIndex = 1;
             // 
+            // eventLog1
+            // 
+            this.eventLog1.SynchronizingObject = this;
+            // 
             // gamePP1
             // 
             this.gamePP1.AllowDrop = true;
@@ -158,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 824);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pInfo);
             this.Controls.Add(this.gamePP1);
             this.Controls.Add(this.ms);
             this.DoubleBuffered = true;
@@ -170,7 +177,8 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frPingPong_MouseMove);
             this.ms.ResumeLayout(false);
             this.ms.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,10 +193,11 @@
         private System.Windows.Forms.ToolStripMenuItem msLenguages;
         private System.Windows.Forms.ToolStripMenuItem msLEnglish;
         private System.Windows.Forms.ToolStripMenuItem msLSpanish;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pInfo;
         private BallPP.Ball ball3;
         private BallPP.Ball ball2;
         private BallPP.Ball ball1;
+        private System.Diagnostics.EventLog eventLog1;
     }
 }
 

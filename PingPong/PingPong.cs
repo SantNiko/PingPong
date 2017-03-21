@@ -36,7 +36,13 @@ namespace PingPong
 
         private void frPingPong_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape) { time.Enabled = false; }
+            Label a = new Label();
+            a.Text = "pausa";
+            this.pInfo.Controls.Add(a);
+            if (e.KeyCode == Keys.Escape) {
+
+                gamePP1.pauseGame();
+            }
         }
 
         private void frPingPong_MouseDown(object sender, MouseEventArgs e)
@@ -57,6 +63,11 @@ namespace PingPong
         private void msLSpanish_Click_1(object sender, EventArgs e)
         {
             aplicarIdioma("es-ES");
+        }
+
+        private void msMNewGame_Click(object sender, EventArgs e)
+        {
+            gamePP1.startGame();
         }
     }
 }
